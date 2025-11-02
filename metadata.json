@@ -1,0 +1,9 @@
+{
+  "uuid": "lux_wotd@ryanu",
+  "name": "Luxembourgish Word of the Day",
+  "description": "Overlays today's LOD word and translations on your wallpaper.",
+  "url": "https://github.com/puglia-ryan/GNOME-Luxembourgish-Word-of-the-Day-Extension",
+  "version": 1,
+  "shell-version": ["46", "47", "48"]
+}
+
