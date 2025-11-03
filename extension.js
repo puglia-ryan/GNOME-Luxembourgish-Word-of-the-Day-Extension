@@ -76,7 +76,7 @@ class WotdWallpaper extends GObject.Object {
 
       this._updateOverlayText(lemma, date, translations);
     } catch (e) {
-      logError(e);
+      console.error(e);
       Main.notifyError('WOTD Overlay', e.message ?? String(e));
     }
   }
@@ -167,7 +167,7 @@ class WotdWallpaper extends GObject.Object {
           : null);
 
       if (!geo) {
-        logError(new Error('WOTD: Could not determine monitor geometry'));
+        console.error(new Error('WOTD: Could not determine monitor geometry'));
         continue;
       }
 
@@ -223,7 +223,7 @@ class WotdWallpaper extends GObject.Object {
       if (this._monitorManager) {
         this._monitorsChangedId = this._monitorManager.connect('monitors-changed', () => this._setupOverlays());
       } else {
-        log('WOTD: no monitor manager found; monitor change handling disabled');
+        console.warn('WOTD: no monitor manager found; monitor change handling disabled');
       }
     }
   }
